@@ -1,0 +1,23 @@
+# ニコニコチャンネルプラス 配信自動要約ツール 依存パッケージ
+
+# 配信検知（公開APIのポーリング）
+requests>=2.32.0
+
+# タイムゾーンDB（Windows には IANA のタイムゾーン情報が同梱されていないため必要）
+tzdata>=2024.1
+
+# 録音（Windows WASAPI ループバック。仮想オーディオデバイスの導入が不要）
+PyAudioWPatch>=0.2.12.7
+
+# 文字起こし（ローカル実行・GPU対応）
+faster-whisper>=1.1.0
+
+# 要約（Anthropic Claude API）
+anthropic>=0.40.0
+
+# GPU(CUDA 12)で faster-whisper を動かすための実行時ライブラリ
+nvidia-cublas-cu12
+nvidia-cudnn-cu12
+
+# 配信ページの再生監視・自動復旧（ブラウザ制御）
+playwright>=1.40.0

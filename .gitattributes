@@ -1,0 +1,10 @@
+* text=auto eol=lf
+
+# バッチファイルは CRLF を保つ（cmd.exe の解釈揺れを避けるため）
+*.bat text eol=crlf
+
+# バイナリ（差分を取らない）
+*.mp4 binary
+*.wav binary
+*.opus binary
+*.lnk binary
